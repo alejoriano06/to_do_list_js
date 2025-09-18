@@ -8,7 +8,7 @@
 
 /* Fondo general */
 body {
-    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    background: linear-gradient(135deg, #000000, #ACB6E5);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@ body {
 
 /* Contenedor principal */
 #global-content .container {
-    background: #fff;
+    background: #000000;
     border-radius: 15px;
     padding: 30px;
     max-width: 600px;
@@ -29,13 +29,13 @@ body {
 /* Títulos */
 h1 {
     text-align: center;
-    color: #333;
+    color: #fffbfb;
     font-size: 2.2rem;
     margin-bottom: 15px;
 }
 
 h2 {
-    color: #444;
+    color: #ffffff;
     font-size: 1.4rem;
     margin: 20px 0 10px;
 }
@@ -56,13 +56,13 @@ h2 {
 }
 
 .formulario input:focus {
-    border-color: #74ebd5;
-    box-shadow: 0 0 6px rgba(116, 235, 213, 0.6);
+    border-color: #646666;
+    box-shadow: 0 0 6px rgba(136, 141, 140, 0.6);
 }
 
 .añadir {
     padding: 12px 18px;
-    background: #74ebd5;
+    background: #4e4e4e;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -141,11 +141,3 @@ h2 {
     cursor: pointer;
     color: #55c8b5;
 }
-
-
-
-
-
-
-
-
