@@ -57,12 +57,12 @@ h2 {
 
 .formulario input:focus {
     border-color: #646666;
-    box-shadow: 0 0 6px rgba(136, 141, 140, 0.6);
+    box-shadow: 0 0 6px rgba(116, 235, 213, 0.6);
 }
 
 .añadir {
     padding: 12px 18px;
-    background: #4e4e4e;
+    background: #74ebd5;
     border: none;
     border-radius: 8px;
     cursor: pointer;
