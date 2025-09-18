@@ -127,6 +127,11 @@ h2 {
     color: #777;
 }
 
+#cont-completed-list .item-to-do {
+
+    text-decoration: line-through;
+}
+
 
 
 
