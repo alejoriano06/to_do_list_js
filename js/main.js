@@ -1,8 +1,8 @@
 //creamos las constantes globales para los elemnetos principales
 
 const input = document.getElementById('to-do-input')
-const addBtn = document.getElementById('addBtn')
-const toDoLis = document.getElementById('to-do')
+const addBtn = document.getElementById('add-btn')
+const toDoList = document.getElementById('cont-to-do-list')
 const completedList = document.getElementById('completed')
 
 //creamos la funcion que nos permite crear una nueva tarea a partir del formulario
@@ -36,8 +36,20 @@ function createToDoItem(textoItem){
 
     return item
 
-   
-
-
-
 }
+
+// detectamos el evento click sobre el boton agregar + con un evento de escucha o lisetener 
+// para que a partir de este evento se agregue la tarea dentro del contenedor cont-to-do-list
+
+addBtn.addEventListener('click', ()=>{
+    const textoItem = input.value.trim(); 
+    if(textoItem==""){
+
+        alert("No se puede creara una tarea vacia");
+    }
+    else{
+        const newItem = createToDoItem(textoItem);
+        toDoList.appendChild(newItem);
+        input.value="";
+    }
+});
