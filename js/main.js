@@ -3,10 +3,12 @@
 const input = document.getElementById('to-do-input')
 const addBtn = document.getElementById('add-btn')
 const toDoList = document.getElementById('cont-to-do-list')
-const completedList = document.getElementById('completed')
+const completedList = document.getElementById('cont-completed-list')
 
 //creamos la funcion que nos permite crear una nueva tarea a partir del formulario
 //toda etiqueta que vamos a crear es a partir de la maqueta html pre existente 
+
+// esta funcion solo crea la estructura html y la deja en un limbo, aun no se inserta en la pagina
 function createToDoItem(textoItem){
     //creamos el nodo o elemento padre o contenedor
     const item = document.createElement('div')
@@ -50,6 +52,36 @@ addBtn.addEventListener('click', ()=>{
     else{
         const newItem = createToDoItem(textoItem);
         toDoList.appendChild(newItem);
+        eventsToItem(newItem)
         input.value="";
     }
-});
+}
+);
+
+//la siguiente funcion nos permitira agregar el funcionamiento sobre las tareas marcar la tarea como completada o en dado caso eliminarla
+
+function eventsToItem(item){
+    // utilizamos querySelector para capturar el input y el button que estan dentro del item
+    const checkbox = item.querySelector('input');
+    const deleteBtn = item.querySelector('button');
+
+    //completar la tarea
+    checkbox.addEventListener('change',()=>{
+
+        if(checkbox.checked){
+            completedList.appendChild(item);
+        }
+
+        else{
+
+            toDoList.appendChild(item);
+        }
+    });
+
+    deleteBtn.addEventListener('click', ()=>{
+
+        item.remove();
+
+    });
+
+}
